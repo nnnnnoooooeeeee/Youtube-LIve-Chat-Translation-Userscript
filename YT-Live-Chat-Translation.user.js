@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Translate YouTube Live Chat + Title (Auto Lang)
 // @namespace    http://tampermonkey.net/
-// @version      1.0.3
+// @version      1.0.4
 // @description  Translate YouTube live chat, banner, and video title (toggleable)
 // @icon         https://raw.githubusercontent.com/nnnnnoooooeeeee/Youtube-LIve-Chat-Translation-Userscript/refs/heads/main/yt-icon.png
 // @author       Nnnnnoooooeeeee
@@ -130,7 +130,7 @@
             const div = document.createElement('div');
             div.className = 'translated-chat';
             div.textContent = translated;
-            div.border-top: double;
+            div.border-top = double;
 
             message.parentElement.appendChild(div);
         } catch (e) {
@@ -186,7 +186,7 @@
             const div = document.createElement('div');
             div.className = 'translated-paid-chat';
             div.textContent = translated;
-            div.border-top: double;
+            div.border-top = double;
             
 
             message.parentElement.appendChild(div);
@@ -283,7 +283,7 @@
             const div = document.createElement('div');
             div.className = 'translated-title';
             div.textContent = translated;
-            div.border-top: double;
+            div.border-top = double;
 
             titleEl.parentElement.appendChild(div);
         } catch (e) {
