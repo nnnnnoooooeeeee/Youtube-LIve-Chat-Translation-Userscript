@@ -1,9 +1,9 @@
 // ==UserScript==
-// @name         Translate YouTube Live Chat + Title (Auto Lang)
+// @name         Auto Translate Youtube Live Chat
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Translate YouTube live chat, banner, and video title (toggleable)
-// @icon         https://raw.githubusercontent.com/nnnnnoooooeeeee/Youtube-LIve-Chat-Translation-Userscript/refs/heads/main/yt-icon.png
+// @description  Translate YouTube live chat, banner, and video title
+// @icon         https://raw.githubusercontent.com/nnnnnoooooeeeee/Auto-Translate-Youtube-Live-Chat-Userscript/refs/heads/main/yt-icon.png
 // @author       Nnnnnoooooeeeee
 // @match        https://www.youtube.com/*
 // @grant        GM_registerMenuCommand
