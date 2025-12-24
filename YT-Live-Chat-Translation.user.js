@@ -130,7 +130,7 @@
             const div = document.createElement('div');
             div.className = 'translated-chat';
             div.textContent = translated;
-            div.style.borderTop = "2px solid";
+            div.style.borderTop = "1px solid";
 
             message.parentElement.appendChild(div);
         } catch (e) {
@@ -186,7 +186,7 @@
             const div = document.createElement('div');
             div.className = 'translated-paid-chat';
             div.textContent = translated;
-            div.style.borderTop = "2px solid";
+            div.style.borderTop = "1px solid";
             
 
             message.parentElement.appendChild(div);
@@ -283,8 +283,8 @@
             const div = document.createElement('div');
             div.className = 'translated-title';
             div.textContent = translated;
-            div.style.borderLeft = "2px solid";
-            div.style.paddingLeft = "6px";
+            div.style.borderLeft = "1px solid";
+            div.style.paddingLeft = "10px";
 
             titleEl.parentElement.appendChild(div);
         } catch (e) {
