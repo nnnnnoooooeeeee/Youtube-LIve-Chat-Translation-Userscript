@@ -1,4 +1,4 @@
-Translate YouTube live chat, banner, and video title (toggleable)
+<h1>Translate YouTube live chat, banner, and video title (toggleable)</h1>
 
 <img width="1787" height="706" alt="image" src="https://github.com/user-attachments/assets/c0023faa-9dfb-4e1b-ada2-122435f18fbb" />
 <br>
