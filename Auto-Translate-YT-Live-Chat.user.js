@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auto Translate Youtube Live Chat
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.0.1
 // @description  Translate YouTube live chat, banner, and video title
 // @icon         https://raw.githubusercontent.com/nnnnnoooooeeeee/Auto-Translate-Youtube-Live-Chat-Userscript/refs/heads/main/yt-icon.png
 // @author       Nnnnnoooooeeeee
