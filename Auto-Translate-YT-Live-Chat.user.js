@@ -8,8 +8,8 @@
 // @match        https://www.youtube.com/*
 // @grant        GM_registerMenuCommand
 // @license      GPL-3.0-or-later
-// @downloadURL  https://github.com/nnnnnoooooeeeee/Auto-Translate-Youtube-Live-Chat-Userscript/raw/refs/heads/main/Auto-Translate-YT-Live-Chat.user.js
-// @updateURL    https://github.com/nnnnnoooooeeeee/Auto-Translate-Youtube-Live-Chat-Userscript/raw/refs/heads/main/Auto-Translate-YT-Live-Chat.user.js
+// @downloadURL https://update.greasyfork.org/scripts/560133/Auto%20Translate%20Youtube%20Live%20Chat.user.js
+// @updateURL https://update.greasyfork.org/scripts/560133/Auto%20Translate%20Youtube%20Live%20Chat.meta.js
 // ==/UserScript==
 
 /* https://github.com/nnnnnoooooeeeee */
@@ -24,6 +24,7 @@
     const state = Object.assign(
         {
             chat: true,
+            paid: true,
             banner: true,
             title: true
         },
@@ -189,7 +190,14 @@
             div.style.borderTop = "1px solid";
             
 
-            message.parentElement.appendChild(div);
+            const actionButtons = node.querySelector('#action-buttons');
+
+            if (actionButtons) {
+                actionButtons.parentElement.insertBefore(div, actionButtons);
+            } else {
+                message.parentElement.appendChild(div); // fallback
+            }
+
         } catch (e) {
             console.error('[YT] Paid chat translate failed', e);
         }
@@ -200,7 +208,7 @@
     /* ================= SUPER CHAT OBSERVER ================= */
 
     function observePaidChat() {
-        if (!state.chat && !state.banner) return;
+        if (!state.paid) return;
 
         const container = document.querySelector(
             'yt-live-chat-item-list-renderer #items'
