@@ -1,15 +1,15 @@
 // ==UserScript==
 // @name         Auto Translate Youtube Live Chat
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.1.1
 // @description  Translate YouTube live chat, banner, and video title
 // @icon         https://raw.githubusercontent.com/nnnnnoooooeeeee/Auto-Translate-Youtube-Live-Chat-Userscript/refs/heads/main/yt-icon.png
 // @author       Nnnnnoooooeeeee
 // @match        https://www.youtube.com/*
 // @grant        GM_registerMenuCommand
 // @license      GPL-3.0-or-later
-// @downloadURL https://update.greasyfork.org/scripts/560133/Auto%20Translate%20Youtube%20Live%20Chat.user.js
-// @updateURL https://update.greasyfork.org/scripts/560133/Auto%20Translate%20Youtube%20Live%20Chat.meta.js
+// @downloadURL https://github.com/nnnnnoooooeeeee/Auto-Translate-Youtube-Live-Chat-Userscript/raw/refs/heads/main/Auto-Translate-YT-Live-Chat.user.js
+// @updateURL https://github.com/nnnnnoooooeeeee/Auto-Translate-Youtube-Live-Chat-Userscript/raw/refs/heads/main/Auto-Translate-YT-Live-Chat.user.js
 // ==/UserScript==
 
 /* https://github.com/nnnnnoooooeeeee */
@@ -51,7 +51,6 @@ const addTranslated=async(el,txt,cls,style,mode='append')=>{
     else el.parentElement.appendChild(d);
 };
 
-
 function processChat(n){
     const m=n.querySelector?.('span#message.yt-live-chat-text-message-renderer');
     if(!m||m.dataset.modified) return;
@@ -64,7 +63,6 @@ function processPaid(n){
     if(!m) return;
     addTranslated(m,m.textContent.trim(),'translated-paid-chat',{borderTop:'1px solid',marginTop:'4px'},'after');
 }
-
 
 async function processTitle(){
     const t=document.querySelector('h1.ytd-watch-metadata yt-formatted-string');
